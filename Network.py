@@ -22,6 +22,7 @@ class Network(nn.Module):
     def __init__(self, n_actions):
 
         super().__init__()
+        
         self.n_actions = n_actions
 
         self.conv1 = nn.Conv2d(in_channels=4, out_channels=32, kernel_size=(8, 8), stride=4)
