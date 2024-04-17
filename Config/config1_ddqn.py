@@ -4,12 +4,12 @@ config = {
     "env_name": "ALE/Assault-v5",
     "gamma": 0.99,
     "seed": 2157,
-    "buffer_size": 20_000,
+    "buffer_size": 15_000,
     "timesteps_per_epoch": 4,
-    "batch_size": 4,
+    "batch_size": 16,
     "total_steps": 3_000_000,
-    "decay_steps": 1_000_000, #steps before epsilon stops decreasing
-    "decay_steps_beta": 1_500_000, #steps before epsilon stops decreasing
+    "decay_steps": 750_000, #steps before epsilon stops decreasing
+    "decay_steps_beta": 500_000, #steps before epsilon stops decreasing
     "learning_rate": 1e-5 * 25,
     "init_epsilon": 1,
     "final_epsilon": 0.1,
@@ -23,5 +23,5 @@ config = {
     "final_beta": 1,
     "loading": False,
     "steps_per_save": 5000,
-    "file_name": "dqn_with_PR.pth"
+    "file_name": "dqn_with_exp_replay.pth"
 }
