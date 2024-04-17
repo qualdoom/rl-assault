@@ -31,13 +31,13 @@ class PreprocessAtariObs(ObservationWrapper):
         img_normalized = img_gray.reshape(self.img_size).astype(np.float32) / 255.0
         return img_normalized
     
-def PrimaryAtariWrap(env, clip_rewards=True):
+def PrimaryAtariWrap(env, clip_rewards=True, skip=4):
     # assert 'NoFrameskip' in env.spec.id
 
     # This wrapper holds the same action for <skip> frames and outputs
     # the maximal pixel value of 2 last frames (to handle blinking
     # in some envs)
-    env = atari_wrappers.MaxAndSkipEnv(env, skip=1)
+    env = atari_wrappers.MaxAndSkipEnv(env, skip=4)
 
     # This wrapper sends done=True when each life is lost
     # (not all the 5 lives that are givern by the game rules).
@@ -57,10 +57,10 @@ def PrimaryAtariWrap(env, clip_rewards=True):
     env = PreprocessAtariObs(env)
     return env
 
-def make_env(clip_rewards=True, seed=None):
+def make_env(clip_rewards=True, seed=None, skip=4):
     env = gym.make(config['env_name'])  # create raw env
     if seed is not None:
         env.seed(seed)
-    env = PrimaryAtariWrap(env, clip_rewards)
+    env = PrimaryAtariWrap(env, clip_rewards, skip)
     env = FrameBuffer(env, n_frames=4, dim_order='pytorch')
     return env
