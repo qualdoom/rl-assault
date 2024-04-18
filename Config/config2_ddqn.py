@@ -21,7 +21,8 @@ config = {
     'alpha': 0.6,
     "init_beta": 0.4,
     "final_beta": 1,
-    "loading": False,
+    "loading": True,
     "steps_per_save": 5000,
-    "file_name": "dqn_with_exp_replay.pth"
+    "file_name": "dqn_with_exp_replay_skip_1.pth",
+    "skip":4
 }

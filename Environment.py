@@ -37,7 +37,7 @@ def PrimaryAtariWrap(env, clip_rewards=True, skip=4):
     # This wrapper holds the same action for <skip> frames and outputs
     # the maximal pixel value of 2 last frames (to handle blinking
     # in some envs)
-    env = atari_wrappers.MaxAndSkipEnv(env, skip=4)
+    env = atari_wrappers.MaxAndSkipEnv(env, skip=skip)
 
     # This wrapper sends done=True when each life is lost
     # (not all the 5 lives that are givern by the game rules).
