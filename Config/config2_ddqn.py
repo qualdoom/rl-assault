@@ -4,7 +4,7 @@ config = {
     "env_name": "ALE/Assault-v5",
     "gamma": 0.99,
     "seed": 2157,
-    "buffer_size": 15_000,
+    "buffer_size": 20_000,
     "timesteps_per_epoch": 4,
     "batch_size": 16,
     "total_steps": 3_000_000,
@@ -23,6 +23,6 @@ config = {
     "final_beta": 1,
     "loading": True,
     "steps_per_save": 5000,
-    "file_name": "dqn_with_exp_replay_skip_1.pth",
+    "file_name": "dqn_with_exp_replay_skip_4.pth",
     "skip":4
 }
