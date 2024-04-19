@@ -57,8 +57,12 @@ def PrimaryAtariWrap(env, clip_rewards=True, skip=4):
     env = PreprocessAtariObs(env)
     return env
 
-def make_env(clip_rewards=True, seed=None, skip=4):
-    env = gym.make(config['env_name'])  # create raw env
+def make_env(clip_rewards=True, seed=None, skip=4, render_mode=None):
+    env = None
+    if render_mode is not None:
+        env = gym.make(config['env_name'], render_mode=render_mode)
+    else:
+        env = gym.make(config['env_name'])  # create raw env
     if seed is not None:
         env.seed(seed)
     env = PrimaryAtariWrap(env, clip_rewards, skip)
