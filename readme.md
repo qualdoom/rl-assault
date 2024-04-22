@@ -1,0 +1,1 @@
+Обучение агента игры в Atari Assault с помощью DQN и Dueling DQN с Experience Replay Buffer и Prioritized Replay Buffer.п
