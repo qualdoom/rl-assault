@@ -23,6 +23,7 @@ config = {
     "final_beta": 1,
     "loading": True,
     "steps_per_save": 5000,
-    "file_name": "dueling_dqn_with_prioritized_replay_skip_4.pth",
+    "file_name": "models/dueling_dqn_with_prioritized_replay_skip_4.pth",
+    "best_file_name": "models/best_score_dueling_dqn_with_prioritized_replay_skip_4.pth",
     "skip": 4
 }

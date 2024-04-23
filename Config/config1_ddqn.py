@@ -23,6 +23,7 @@ config = {
     "final_beta": 1,
     "loading": True,
     "steps_per_save": 5000,
-    "file_name": "dqn_with_PR_skip_1.pth",
+    "file_name": "models/dqn_with_PR_skip_1.pth",
+    "best_file_name": "models/best_score_dqn_with_PR_skip_1.pth",
     "skip": 1
 }
