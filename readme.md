@@ -2,4 +2,4 @@
 
 Доступна визуализация игры агента по ссылке: https://youtu.be/yzIsHN5WWdM
 
-Для деталей читайте файл project_report.pdf
+Для деталей читайте файл project report.pdf
